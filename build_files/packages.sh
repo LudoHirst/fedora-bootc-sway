@@ -17,7 +17,7 @@ dnf install -y --skip-unavailable \
     linux-firmware logrotate lrzsz lsof man-db man-pages mdadm mesa-dri-drivers mesa-vulkan-drivers mpage \
     mtr nfs-utils nss-altfiles nss-mdns ntfs-3g ntfsprogs opensc openssh-clients \
     openssh-server pam_afs_session paps passwdqc pciutils pinfo pipewire-alsa pipewire-config-raop \
-    pipewire-gstreamer pipewire-pulseaudio pipewire-utils plymouth plymouth-system-theme policycoreutils \
+    pipewire-gstreamer pipewire-pulseaudio pipewire-utils policycoreutils \
     policycoreutils-python-utils prefixdevname procps-ng psmisc qemu-guest-agent quota realmd rootfiles rpm \
     rpm-ostree rsync samba-client selinux-policy-targeted setup shadow-utils sos spice-vdagent spice-webdavd \
     sssd-common sssd-kcm sudo system-config-printer-udev systemd systemd-oomd-defaults systemd-resolved \
@@ -47,7 +47,7 @@ dnf install -y --skip-unavailable \
     intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
-    plymouth-system-theme polkit pulseaudio-utils slurp \
+    polkit pulseaudio-utils slurp \
     swaybg swayidle swaylock greetd tuigreet \
     system-config-printer tuned-ppd tuned-switcher \
     wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
