@@ -36,9 +36,6 @@ dnf install -y \
 dnf install -y --nogpgcheck --repofrompath \
     'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
-# get ride of fedora flatpaks
-#mv -f /usr/lib/systemd/system/flatpak-delete-fedora-repos.service /usr/lib/systemd/system/flatpak-add-fedora-repos.service
-
 # install extra
 dnf swap -y --allowerasing ffmpeg-free ffmpeg
 dnf install -y --skip-unavailable \
@@ -51,7 +48,7 @@ dnf install -y --skip-unavailable \
     swaybg swayidle swaylock greetd tuigreet \
     system-config-printer tuned-ppd tuned-switcher qt5-qtwayland qt6-qtwayland qt5ct qt6ct \
     wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-    chromium ghostty emacs \
+    chromium ghostty emacs aria2 mpv yt-dlp fastfetch \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
