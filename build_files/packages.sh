@@ -1,0 +1,63 @@
+#!/bin/bash
+set -ouex pipefail
+
+# install base
+dnf install -y --skip-unavailable \
+    NetworkManager NetworkManager-bluetooth NetworkManager-config-connectivity-fedora NetworkManager-wifi \
+    NetworkManager-wwan acl alsa-ucm alsa-utils amd-gpu-firmware at-spi2-atk at-spi2-core atheros-firmware \
+    attr audit b43-fwcutter b43-openfwwf bash bash-color-prompt bash-completion bc bind-utils bluez-cups \
+    brcmfmac-firmware brltty btrfs-progs bzip2 chrony cifs-utils colord compsize coreutils cpio cryptsetup \
+    cups cups-browsed cups-filters curl cyrus-sasl-plain default-editor  default-fonts-cjk-serif \
+    default-fonts-core-emoji default-fonts-core-math default-fonts-core-mono default-fonts-core-sans \
+    default-fonts-core-serif default-fonts-other-mono default-fonts-other-sans default-fonts-other-serif \
+    dnsmasq e2fsprogs ethtool exfatprogs file filesystem firewalld fpaste fwupd gamemode glibc \
+    glibc-all-langpacks gnupg2 gstreamer1-plugin-dav1d gstreamer1-plugin-libav gstreamer1-plugins-bad-free \
+    gstreamer1-plugins-good gstreamer1-plugins-ugly-free gutenprint gutenprint-cups hostname hplip hunspell \
+    hyperv-daemons ibus-anthy ibus-chewing ibus-gtk3 ibus-gtk4 ibus-hangul ibus-libpinyin ibus-m17n \
+    ibus-typing-booster intel-gpu-firmware iproute iptables-nft iptstate iputils iwlegacy-firmware \
+    iwlwifi-dvm-firmware iwlwifi-mvm-firmware kbd kmscon less libertas-firmware libglvnd-gles linux-firmware \
+    logrotate lrzsz lsof man-db man-pages mdadm mesa-dri-drivers mesa-vulkan-drivers mpage mt7xxx-firmware \
+    mtr nfs-utils nss-altfiles nss-mdns ntfs-3g ntfsprogs nvidia-gpu-firmware nxpwireless-firmware \
+    open-vm-tools-desktop opensc openssh-clients openssh-server orca pam_afs_session paps passwdqc pciutils \
+    pinfo pipewire-alsa pipewire-config-raop pipewire-gstreamer pipewire-pulseaudio pipewire-utils plymouth \
+    plymouth-system-theme policycoreutils policycoreutils-python-utils prefixdevname procps-ng psmisc \
+    qcom-wwan-firmware qemu-guest-agent quota realmd realtek-firmware rootfiles rpm rpm-ostree rsync samba-client \
+    selinux-policy-targeted setup shadow-utils sos speech-dispatcher spice-vdagent spice-webdavd sssd-common \
+    sssd-kcm sudo system-config-printer-udev systemd systemd-oomd-defaults systemd-resolved systemd-udev tar \
+    time tiwilink-firmware tree unzip uresourced usb_modeswitch usbutils util-linux vim-minimal wget2-wget which \
+    whois wireplumber words wpa_supplicant zip zram-generator-defaults
+
+# remove softwares
+dnf remove -y \
+    google-noto-sans-cjk-vf-fonts default-fonts-cjk-sans
+
+# add rpmfusion
+dnf install -y \
+    https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf install -y --nogpgcheck --repofrompath \
+    'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
+# get ride of fedora flatpaks
+#mv -f /usr/lib/systemd/system/flatpak-delete-fedora-repos.service /usr/lib/systemd/system/flatpak-add-fedora-repos.service
+
+# install extra
+dnf install -y --skip-unavailable \
+    labwc labwc-session \
+    dkms gcc kernel-devel make wget \
+    intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
+    NetworkManager-l2tp-gnome NetworkManager-libreswan-gnome NetworkManager-openconnect-gnome \
+    NetworkManager-openvpn-gnome NetworkManager-sstp-gnome NetworkManager-vpnc-gnome \
+    blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
+    mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
+    plymouth-system-theme polkit pulseaudio-utils slurp \
+    swaybg swayidle swaylock greetd tuigreet \
+    system-config-printer tuned-ppd tuned-switcher \
+    wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
+    xorg-x11-server-Xwayland \
+    chromium ffmpeg ghostty \
+    google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
+    google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
+    google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
+    google-crosextra-caladea-fonts

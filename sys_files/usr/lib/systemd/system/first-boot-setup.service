@@ -1,0 +1,16 @@
+[Unit]
+Description=First Boot Interactive User Setup
+ConditionFirstBoot=yes
+Before=display-manager.service greetd.service systemd-user-sessions.service
+After=local-fs.target
+
+[Service]
+Type=oneshot
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty2
+ExecStart=/usr/local/bin/first-boot-setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
