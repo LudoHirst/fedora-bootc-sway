@@ -43,7 +43,7 @@ dnf install -y --nogpgcheck --repofrompath \
 dnf swap -y --allowerasing ffmpeg-free ffmpeg
 dnf install -y --skip-unavailable \
     labwc labwc-session \
-    dkms gcc kernel-devel make wget git \
+    dkms gcc kernel-devel kernel-headers make wget git \
     intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
