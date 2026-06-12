@@ -47,7 +47,7 @@ dnf install -y --skip-unavailable \
     intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-qt playerctl \
-    polkit lxqt-policykit pulseaudio-utils slurp \
+    polkit lxqt-policykit pulseaudio-utils slurp xorg-x11-server-Xwayland \
     swaybg swayidle swaylock greetd tuigreet \
     system-config-printer tuned-ppd tuned-switcher qt5-qtwayland qt6-qtwayland qt5ct qt6ct \
     wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
