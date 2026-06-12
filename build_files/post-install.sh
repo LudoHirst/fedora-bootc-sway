@@ -7,6 +7,6 @@ systemctl enable greetd.service
 
 # remove softwares
 dnf remove -y \
-    dkms gcc kernel-devel kernel-headers make wget
+    gcc kernel-devel kernel-headers make wget
 
 dnf clean all
