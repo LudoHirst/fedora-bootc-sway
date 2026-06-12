@@ -13,20 +13,32 @@ echo " Let's create your primary user account."
 echo "======================================"
 
 # 2. Prevent accidental empty inputs from crashing the setup
-USERNAME=""
-while [ -z "$USERNAME" ]; do
-    read -p "Enter desired username: " USERNAME
-done
+while true; do
+    USERNAME=""
+    while [ -z "$USERNAME" ]; do
+        read -p "Enter desired username: " USERNAME
+    done
 
-# Create the user and add to the wheel (sudo) group
-useradd -m -G wheel "$USERNAME"
+    # Create the user and add to the wheel (sudo) group
+    if useradd -m -G wheel "$USERNAME"; then
+        break
+    else
+        echo "Failed to create user '$USERNAME'. Please try another."
+    fi
+done
 
 # Prompt for the password using the standard passwd utility
 echo "Please set a password for $USERNAME:"
-passwd "$USERNAME"
+while ! passwd "$USERNAME"; do
+    echo "Password setup failed. Please try again."
+done
 
 echo "User $USERNAME created successfully."
 
 # Give the user a moment to read the success message before systemd 
 # instantly kills the screen to start the display manager
 sleep 3
+
+# switch back to VT 1 for the display manager
+chvt 1
+
