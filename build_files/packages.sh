@@ -43,6 +43,7 @@ dnf install -y --nogpgcheck --repofrompath \
 #mv -f /usr/lib/systemd/system/flatpak-delete-fedora-repos.service /usr/lib/systemd/system/flatpak-add-fedora-repos.service
 
 # install extra
+dnf swap -y --allowerasing ffmpeg-free ffmpeg
 dnf install -y --skip-unavailable \
     labwc labwc-session \
     dkms gcc kernel-devel make wget \
@@ -56,7 +57,7 @@ dnf install -y --skip-unavailable \
     system-config-printer tuned-ppd tuned-switcher \
     wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
     xorg-x11-server-Xwayland \
-    chromium ffmpeg ghostty \
+    chromium ghostty \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
