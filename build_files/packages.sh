@@ -42,17 +42,16 @@ dnf install -y --nogpgcheck --repofrompath \
 # install extra
 dnf swap -y --allowerasing ffmpeg-free ffmpeg
 dnf install -y --skip-unavailable \
-    labwc labwc-session labwc-tweaks \
+    labwc labwc-session labwc-tweaks labwc-menu-generator \
     dkms gcc kernel-devel kernel-headers make wget git \
     intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
-    mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
-    polkit pulseaudio-utils slurp \
+    mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-qt playerctl \
+    polkit lxqt-policykit pulseaudio-utils slurp \
     swaybg swayidle swaylock greetd tuigreet \
-    system-config-printer tuned-ppd tuned-switcher \
+    system-config-printer tuned-ppd tuned-switcher qt5-qtwayland qt6-qtwayland qt5ct qt6ct \
     wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-    xorg-x11-server-Xwayland \
-    chromium ghostty \
+    chromium ghostty emacs \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
