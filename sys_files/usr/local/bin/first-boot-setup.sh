@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Clear the screen for a clean prompt
 clear
 
