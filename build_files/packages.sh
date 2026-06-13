@@ -48,7 +48,7 @@ dnf install -y --skip-unavailable \
     swaybg swayidle swaylock greetd tuigreet sfwbar mako \
     system-config-printer tuned-ppd tuned-switcher \
     wev wl-clipboard wlr-randr wlsunset xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-    chromium ghostty emacs aria2 mpv yt-dlp fastfetch \
+    chromium ghostty emacs-pgtk aria2 mpv yt-dlp fastfetch \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
