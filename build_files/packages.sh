@@ -45,7 +45,7 @@ dnf install -y --skip-unavailable \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
     polkit lxqt-policykit pulseaudio-utils slurp xorg-x11-server-Xwayland \
-    swaybg swayidle swaylock greetd tuigreet sfwbar \
+    swaybg swayidle swaylock greetd tuigreet sfwbar mako \
     system-config-printer tuned-ppd tuned-switcher \
     wev wl-clipboard wlr-randr wlsunset xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
     chromium ghostty emacs aria2 mpv yt-dlp fastfetch \
