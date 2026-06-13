@@ -45,9 +45,9 @@ dnf install -y --skip-unavailable \
     blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-qt playerctl \
     polkit lxqt-policykit pulseaudio-utils slurp xorg-x11-server-Xwayland \
-    swaybg swayidle swaylock greetd tuigreet \
+    swaybg swayidle swaylock greetd tuigreet sfwbar mako \
     system-config-printer tuned-ppd tuned-switcher qt5-qtwayland qt6-qtwayland qt5ct qt6ct \
-    wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
+    wev wl-clipboard wlr-randr wlsunset xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
     chromium ghostty emacs aria2 mpv yt-dlp fastfetch \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
