@@ -52,7 +52,4 @@ dnf install -y --skip-unavailable \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
     google-crosextra-caladea-fonts
-
-# remove extra
-dnf remove -y \
     fedora-chromium-config
