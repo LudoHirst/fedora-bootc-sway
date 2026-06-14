@@ -4,7 +4,7 @@ vt = 1
 
 [default_session]
 # Tell greetd to use tuigreet, and tell tuigreet to launch labwc
-command = "tuigreet --time --cmd labwc"
+command = "tuigreet --time --cmd sway"
 
 # The user to run the greeter as. 
 # The greetd package automatically creates this 'greetd' user.
