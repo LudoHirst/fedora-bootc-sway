@@ -24,10 +24,6 @@ dnf install -y --skip-unavailable \
     systemd-udev tar time tree unzip uresourced usb_modeswitch usbutils util-linux vim-minimal wget2-wget \
     which whois wireplumber words wpa_supplicant zip zram-generator-defaults
 
-# remove softwares
-dnf remove -y \
-    google-noto-sans-cjk-vf-fonts default-fonts-cjk-sans
-
 # add rpmfusion
 dnf install -y \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
