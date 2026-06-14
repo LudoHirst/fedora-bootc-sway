@@ -8,6 +8,6 @@ systemctl mask systemd-remount-fs.service
 
 # remove softwares
 dnf remove -y \
-    kernel-devel kernel-headers make
+    kernel-devel kernel-headers
 
 dnf clean all
