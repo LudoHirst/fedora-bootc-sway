@@ -19,6 +19,3 @@ bash install.bluetooth.sh -k "${TARGET_KERNEL}"
 # Cleanup driver source
 popd
 rm -rf /tmp/macbook12-bluetooth-driver
-
-# Remove heavy build dependencies to reduce final image size
-dnf remove -y gcc kernel-devel kernel-headers make git
