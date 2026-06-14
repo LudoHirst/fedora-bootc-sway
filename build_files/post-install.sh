@@ -8,6 +8,6 @@ systemctl mask systemd-remount-fs.service
 
 # remove softwares
 dnf remove -y \
-    gcc kernel-devel kernel-headers make wget
+    kernel-devel kernel-headers make
 
 dnf clean all
