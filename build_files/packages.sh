@@ -36,24 +36,24 @@ dnf install -y \
 dnf install -y --nogpgcheck --repofrompath \
     'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
-# get ride of fedora flatpaks
-#mv -f /usr/lib/systemd/system/flatpak-delete-fedora-repos.service /usr/lib/systemd/system/flatpak-add-fedora-repos.service
-
 # install extra
 dnf swap -y --allowerasing ffmpeg-free ffmpeg
 dnf install -y --skip-unavailable \
-    labwc labwc-session \
+    labwc labwc-session labwc-tweaks labwc-menu-generator \
     gcc kernel-devel kernel-headers make wget git \
     intel-media-driver openh264 intel-gpu-tools just vim-enhanced flatpak-spawn fzf lshw htop \
-    blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi lxqt-policykit \
+    blueman bolt fprintd-pam gnome-keyring-pam grim gvfs gvfs-smb imv kanshi \
     mesa-dri-drivers mesa-vulkan-drivers network-manager-applet pavucontrol pinentry-gnome3 playerctl \
-    polkit pulseaudio-utils slurp \
-    swaybg swayidle swaylock greetd tuigreet \
+    polkit lxqt-policykit pulseaudio-utils slurp xorg-x11-server-Xwayland \
+    swaybg swayidle swaylock greetd tuigreet sfwbar mako \
     system-config-printer tuned-ppd tuned-switcher \
-    wev wl-clipboard wlr-randr wlsunset xarchiver xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
-    xorg-x11-server-Xwayland \
-    chromium ghostty \
+    wev wl-clipboard wlr-randr wlsunset xdg-desktop-portal-gtk xdg-desktop-portal-wlr \
+    chromium ghostty emacs-pgtk aria2 mpv yt-dlp fastfetch \
     google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts \
     google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts google-go-mono-fonts \
     google-tinos-fonts google-arimo-fonts google-carlito-fonts google-cousine-fonts \
     google-crosextra-caladea-fonts
+
+# remove extra
+dnf remove -y \
+    fedora-chromium-config
